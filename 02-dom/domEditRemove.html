@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body style="background-color: #212121; color: #fff;">
+    <ul class="list">
+        <li class="item">one</li>
+    </ul>
+</body>
+<script>
+    const li = document.querySelector('.item')
+    // li.innerHTML = 'Hello you are just been changed'
+    const newLi = document.createElement('li')
+    newLi.textContent = 'you have been changed from other way'
+    // li.replaceWith(newLi)
+    function addListItem(itemName){
+        const parent = document.querySelector('.list')
+        const li = document.createElement('li')
+        li.appendChild(document.createTextNode(itemName)) // optimized way.. less traversal for dom other wise you can use innerHTML
+        parent.appendChild(li)
+    }
+    addListItem('ho')
+    addListItem('ho')
+    addListItem('ho')
+    addListItem('ho')
+    addListItem('ho')
+    addListItem('ho')
+    addListItem('hatt')
+    addListItem('hatt')
+    addListItem('teri maa ki')
+    document.querySelector('ul').lastElementChild.remove() // for removing 
+</script>
+</html>
