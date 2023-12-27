@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document Model Object Manipulation</title>
+</head>
+<body style="background-color: #212121; color: #fff;">
+    <!-- <div class="weekday">
+        <div class="day">Monday</div>
+        <div class="day">Tuesday</div>
+        <div class="day">Wednesday</div>
+        <div class="day">Thursday</div>
+        <div class="day">Friday</div>
+    </div> -->
+    
+</body>
+<script>
+    // const weekday = document.querySelector('.weekday')
+    // console.log(weekday.children);
+    const main = document.createElement('div')
+    main.style.backgroundColor = 'green'
+    main.style.padding = '15px'
+    main.className = 'main'
+    main.id = 'main-div-id'
+    main.innerText = 'chai aur code se sikha hun'
+    document.body.appendChild(main)
+</script>
+</html>
