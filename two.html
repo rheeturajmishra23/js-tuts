@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Set Interval example</h1>
+    <div id="sayHi">
+
+    </div>
+    <button id="start">Start</button>
+    <button id="stop">Stop</button>
+</body>
+<script>
+    // Set interval Example
+    const sayHi = document.getElementById('sayHi')
+    const startBtn = document.querySelector('#start')
+    const stopBtn = document.querySelector('#stop')
+    let start = ''
+    function hello(){
+       sayHi.innerHTML += `<p>Hello ${Date.now()}</p>`;
+    }
+
+    startBtn.addEventListener('click',function(){
+        start = setInterval(hello,2000)
+    },false)
+
+    stopBtn.addEventListener('click',function(){
+        clearInterval(start)
+        sayHi.innerHTML = 'Interval stopped'
+    })
+
+</script>
+</html>
